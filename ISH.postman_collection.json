@@ -1,0 +1,473 @@
+{
+	"info": {
+		"_postman_id": "7e31e4dc-ec69-4d95-95e0-b5f5c4fe4081",
+		"name": "ISH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35275376"
+	},
+	"item": [
+		{
+			"name": "StateName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/CHII-web-api/find/AP111222333",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"CHII-web-api",
+						"find",
+						"AP111222333"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allPlans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dataCollection/planDetails",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"planDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PlanDetailsByPlanCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dataCollection/fetchPlanInfo/SNAP",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"fetchPlanInfo",
+						"SNAP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CitizenApplication",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fullName\": \"Naga Mouli Anil G\",\r\n  \"phoneNumber\": \"9701186333\",\r\n  \"gender\": \"Male\",\r\n  \"email\": \"nagamoulianil03@gmail.com\",\r\n  \"chiiNumber\": \"AP123456789\",\r\n  \"address\": \"Georgepeta\",\r\n  \"dob\": \"2001-03-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/citizenReg/save",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"citizenReg",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SavePlan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"appId\": 1,\r\n  \"planCode\": \"SNAP\",\r\n  \"startDate\": \"2025-04-22\",\r\n  \"endDate\": \"2035-05-22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dataCollection/savePlan",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"savePlan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchSavedPlan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dataCollection/fetchSavedPlan/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"fetchSavedPlan",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePlan",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appId\": 1,\r\n    \"planCode\": \"QHP\",\r\n    \"startDate\": \"2025-05-12\",\r\n    \"endDate\": \"2035-05-12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dataCollection/updatePlan",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"updatePlan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveIncomeDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"appId\": 1,\r\n  \"empIncome\": 1275000,\r\n  \"propertyIncome\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dataCollection/saveIncome",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"saveIncome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchIncomeDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dataCollection/fetchIncomeDetails/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"fetchIncomeDetails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateIncome",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appId\": 1,\r\n    \"empIncome\": 1274000.0,\r\n    \"propertyIncome\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dataCollection/updateIncome",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"updateIncome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveEducation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appId\": 1,\r\n    \"highestQualification\": \"B.Tech (Ece)\",\r\n    \"passoutYear\": 2023\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dataCollection/saveEducation",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"saveEducation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchEducation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dataCollection/fetchEducation/1000000063",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"fetchEducation",
+						"1000000063"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEducation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appId\": 1,\r\n    \"highestQualification\": \"B.Tech (Ece)\",\r\n    \"passoutYear\": 2023\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dataCollection/updateEducation",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"updateEducation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveChild",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"appId\": 1,\r\n    \"childName\": \"Simba\",\r\n    \"dateofBirth\": \"2025-02-12\",\r\n    \"childCHII\": \"AP998877665\"\r\n  },\r\n   {\r\n    \"appId\": 1,\r\n    \"childName\": \"Mufasa\",\r\n    \"dateofBirth\": \"2025-02-12\",\r\n    \"childCHII\": \"AP556677889\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dataCollection/saveChild",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"saveChild"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchChild",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dataCollection/fetchChild/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"fetchChild",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateChild",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"appId\": 1,\r\n        \"childName\": \"Simba\",\r\n        \"dateofBirth\": \"2024-10-07\",\r\n        \"childCHII\": \"AP998877664\"\r\n    },\r\n    {\r\n        \"appId\": 1,\r\n        \"childName\": \"Mufasa\",\r\n        \"dateofBirth\": \"2024-10-17\",\r\n        \"childCHII\": \"AP556677865\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dataCollection/updateChild",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"updateChild"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dataCollection/show_Report/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dataCollection",
+						"show_Report",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckEligible",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/eligible/check-Eligible/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"eligible",
+						"check-Eligible",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendMail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/trigger/activate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"trigger",
+						"activate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:9095",
+			"type": "string"
+		}
+	]
+}
