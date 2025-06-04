@@ -65,9 +65,7 @@ ArogyaSetuPlus is a web-based insurance application designed to simplify and str
 
 ## 🔗 Postman Collection
 
-Explore and test the available APIs with the official Postman collection:  
-👉 [ArogyaSetuPlus Postman Workspace](https://anilg03.postman.co/workspace/My-Workspace~0f5d9e5a-ca46-42b8-8226-8cee9f30d83f/collection/35275376-7e31e4dc-ec69-4d95-95e0-b5f5c4fe4081?action=share&creator=35275376)
-
+Explore and test the available APIs with the official Postman collection in the Repo with the name ISH.postmancolletion.json
 ---
 
 ## 🤝 Contribution
