@@ -23,12 +23,14 @@ public class CitizenApplicationRegistrationController {
     @PostMapping("/save")
     public ResponseEntity<?> saveApplication(@RequestBody CitizenRegistrationInputs inputs) {
 	try {
-	    int appId = registrationService.registerCitizenApplcation(inputs);
-	    if (appId > 0) {
-		return new ResponseEntity<Integer>(appId,HttpStatus.OK);
-	    } else {
-		return new ResponseEntity<String>("Invalid CHII Number or State ", HttpStatus.NOT_FOUND);
-	    }
+	    String msg  = registrationService.registerCitizenApplcation(inputs);
+	    if (msg.startsWith("Citizen Registration Successful")) {
+                return new ResponseEntity<>(msg, HttpStatus.OK);
+            } else if (msg.startsWith("FAILED: Duplicate")) {
+                return new ResponseEntity<>(msg, HttpStatus.CONFLICT);
+            } else {
+                return new ResponseEntity<>(msg, HttpStatus.BAD_REQUEST);
+            }
 	} catch (Exception e) {
 	    return new ResponseEntity<String>(e.getMessage(), HttpStatus.SERVICE_UNAVAILABLE);
 	}

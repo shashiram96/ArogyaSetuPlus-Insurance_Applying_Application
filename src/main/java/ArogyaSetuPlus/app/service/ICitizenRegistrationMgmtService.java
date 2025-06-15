@@ -4,6 +4,6 @@ import ArogyaSetuPlus.app.bindings.CitizenRegistrationInputs;
 
 public interface ICitizenRegistrationMgmtService {
     
-    public Integer registerCitizenApplcation(CitizenRegistrationInputs Inputs);
+    public String registerCitizenApplcation(CitizenRegistrationInputs Inputs) throws Exception;
 
 }

@@ -30,13 +30,13 @@ public class CitizenRegistrationEntity {
     private Integer appId;
     @Column(name = "Full_Name", length = 50)
     private String fullName;
-    @Column(name = "phone_Number", length = 10)
+    @Column(name = "phone_Number", length = 10, unique = true)
     private String phoneNumber;
     @Column(name = "Gender", length = 6)
     private String gender;
-    @Column(name = "email_Id", length = 50)
+    @Column(name = "email_Id", length = 50, unique = true)
     private String email;
-    @Column(name = "CHIINumber", length = 15)
+    @Column(name = "CHIINumber", length = 15, unique = true)
     private String chiiNumber; // Citizen Health Insurance Identity Number
     @Column(name = "Address", length = 50)
     private String address;

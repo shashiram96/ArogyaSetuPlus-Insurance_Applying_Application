@@ -4,12 +4,17 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "DC_PLAN_DETAILS")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class DcPlanDetailsEntity {
+  
     @Id
     @Column(name = "PLAN_CODE", length = 10)
     private String planCode;
