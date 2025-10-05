@@ -24,6 +24,7 @@ public class EligibilityDetailsEntity {
     private String planHolderName;
     @Column(length = 30)
     private String chiiNumber;
+This is the best way to practice anything
     @Column(length = 30)
     private String planCode;
     private LocalDate planStartDate;
@@ -31,7 +32,7 @@ public class EligibilityDetailsEntity {
     private Double benifitAmount;
     @Column(length = 15)
     private String planStatus;
-    @Column(length = 30)
+    @Column(length = 30)To pRACTICE EVERYTHING IS POSSIBLE 
     private String denialReason;
-
+ This is also new way 
 }
