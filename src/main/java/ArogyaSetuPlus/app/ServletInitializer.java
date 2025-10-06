@@ -8,6 +8,11 @@ public class ServletInitializer extends SpringBootServletInitializer {
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(ArogyaSetuPlusInsuranceApplyingApplication.class);
+
+
+
+This third commit okay please record this  
+
 	}
 
 }
